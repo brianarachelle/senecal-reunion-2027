@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senecal Family Reunion 2027 — Dog Creek Lodge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pine: #1a2e1a;
+    --moss: #2d4a2d;
+    --sage: #5c7a5c;
+    --cream: #f5f0e8;
+    --warm-white: #faf7f2;
+    --bark: #6b4c2a;
+    --gold: #c9963a;
+    --snow: #e8e4dc;
+    --charcoal: #2c2c2c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ─────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--pine);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 110%, rgba(44,74,44,0.9) 0%, transparent 70%),
+      linear-gradient(180deg, #0d1a0d 0%, #1a2e1a 40%, #2d4a2d 100%);
+  }
+
+  /* Mountain silhouette SVG */
+  .mountain-silhouette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0.35;
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 8%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 20%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 12%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 85% 18%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 8%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 35%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 75% 28%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 40%, rgba(255,255,255,0.4) 0%, transparent 100%);
+  }
+
+  /* Pine tree decorations */
+  .pine-trees {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 2%;
+    pointer-events: none;
+  }
+
+  .tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tree-top {
+    width: 0;
+    height: 0;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    border-bottom: solid rgba(13,26,13,0.8);
+  }
+
+  .tree-1 .tree-top { border-left-width: 18px; border-right-width: 18px; border-bottom-width: 55px; }
+  .tree-2 .tree-top { border-left-width: 12px; border-right-width: 12px; border-bottom-width: 38px; }
+  .tree-3 .tree-top { border-left-width: 22px; border-right-width: 22px; border-bottom-width: 70px; }
+  .tree-4 .tree-top { border-left-width: 15px; border-right-width: 15px; border-bottom-width: 48px; }
+  .tree-5 .tree-top { border-left-width: 10px; border-right-width: 10px; border-bottom-width: 32px; }
+
+  .tree-layer2 {
+    width: 0;
+    height: 0;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    border-bottom: solid rgba(13,26,13,0.7);
+    margin-top: -20px;
+  }
+  .tree-1 .tree-layer2 { border-left-width: 26px; border-right-width: 26px; border-bottom-width: 50px; }
+  .tree-2 .tree-layer2 { border-left-width: 17px; border-right-width: 17px; border-bottom-width: 34px; }
+  .tree-3 .tree-layer2 { border-left-width: 32px; border-right-width: 32px; border-bottom-width: 65px; }
+  .tree-4 .tree-layer2 { border-left-width: 22px; border-right-width: 22px; border-bottom-width: 44px; }
+  .tree-5 .tree-layer2 { border-left-width: 14px; border-right-width: 14px; border-bottom-width: 28px; }
+
+  .tree-trunk {
+    background: rgba(10,20,10,0.9);
+    width: 6px;
+    height: 18px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(245,240,232,0.7);
+    display: block;
+    font-size: 0.65em;
+  }
+
+  .hero-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.8rem auto;
+    opacity: 0.7;
+  }
+
+  .hero-dates {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: rgba(245,240,232,0.85);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-location {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    opacity: 0.9;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(245,240,232,0.4);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(245,240,232,0.4), transparent);
+    animation: scrollpulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollpulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 0.8; transform: scaleY(1.1); }
+  }
+
+  /* ── NAV ──────────────────────────────────────────── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--pine);
+    border-bottom: 1px solid rgba(201,150,58,0.2);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── SECTIONS ─────────────────────────────────────── */
+  section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--pine);
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── COUNTDOWN BAND ──────────────────────────────── */
+  .countdown-band {
+    background: var(--pine);
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .countdown-inner {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.45);
+  }
+
+  .countdown-sep {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: 0.4;
+    align-self: center;
+    padding-bottom: 1.2rem;
+  }
+
+  /* ── ITINERARY ───────────────────────────────────── */
+  .itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--snow);
+    border: 1px solid var(--snow);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .itinerary-day {
+    background: var(--warm-white);
+    padding: 2rem 1.5rem;
+  }
+
+  .day-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--pine);
+    line-height: 1;
+  }
+
+  .day-name {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.5rem;
+  }
+
+  .day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .day-event {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .event-time {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-top: 1px;
+    min-width: 38px;
+  }
+
+  .event-name {
+    font-size: 0.82rem;
+    color: var(--charcoal);
+    line-height: 1.35;
+  }
+
+  .day-featured {
+    background: var(--pine);
+  }
+
+  .day-featured .day-date,
+  .day-featured .day-name,
+  .day-featured .event-name { color: var(--cream); }
+
+  .day-featured .day-name { color: rgba(245,240,232,0.5); }
+  .day-featured .event-time { color: var(--gold); }
+
+  /* ── LODGE ───────────────────────────────────────── */
+  .lodge-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .lodge-image-block {
+    position: relative;
+  }
+
+  .lodge-img-main {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #2d4a2d 0%, #1a2e1a 50%, #0d1a0d 100%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: rgba(245,240,232,0.3);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .lodge-img-accent {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    width: 55%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #6b4c2a 0%, #4a3020 100%);
+    border-radius: 4px;
+    border: 4px solid var(--warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: rgba(245,240,232,0.3);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .lodge-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--snow);
+    margin-top: 2rem;
+  }
+
+  .lodge-stat {
+    background: var(--warm-white);
+    padding: 1.2rem;
+    text-align: center;
+  }
+
+  .lodge-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pine);
+  }
+
+  .lodge-stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-top: 0.15rem;
+  }
+
+  .lodge-details p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+  }
+
+  .lodge-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .lodge-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+  }
+
+  .lodge-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── ACTIVITIES ──────────────────────────────────── */
+  .activities-section {
+    background: var(--cream);
+    max-width: 100%;
+    padding: 5rem 2rem;
+  }
+
+  .activities-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .activity-card {
+    background: var(--warm-white);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .activity-img {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+
+  .activity-img.hiking { background: linear-gradient(135deg, #3d5a3d, #1a2e1a); }
+  .activity-img.skiing { background: linear-gradient(135deg, #c8dce8, #a8c4d8); }
+  .activity-img.fishing { background: linear-gradient(135deg, #4a6b8a, #2d4a6a); }
+  .activity-img.bonfire { background: linear-gradient(135deg, #6b3a1a, #4a2010); }
+  .activity-img.wildlife { background: linear-gradient(135deg, #5c7a4a, #3a5a2a); }
+  .activity-img.restaurant { background: linear-gradient(135deg, #7a5a3a, #5a3a1a); }
+
+  .activity-body {
+    padding: 1.2rem 1.4rem 1.4rem;
+  }
+
+  .activity-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--pine);
+    margin-bottom: 0.4rem;
+  }
+
+  .activity-desc {
+    font-size: 0.82rem;
+    color: #5a5a5a;
+    line-height: 1.55;
+  }
+
+  /* ── RSVP ────────────────────────────────────────── */
+  .rsvp-section {
+    background: var(--pine);
+    max-width: 100%;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .rsvp-inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .rsvp-section .section-title {
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .rsvp-subtitle {
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+
+  .rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .form-input {
+    background: rgba(245,240,232,0.07);
+    border: 1px solid rgba(245,240,232,0.15);
+    border-radius: 3px;
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--cream);
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input::placeholder { color: rgba(245,240,232,0.3); }
+  .form-input:focus { border-color: var(--gold); }
+
+  .form-select {
+    background: rgba(245,240,232,0.07);
+    border: 1px solid rgba(245,240,232,0.15);
+    border-radius: 3px;
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: rgba(245,240,232,0.6);
+    width: 100%;
+    outline: none;
+    appearance: none;
+  }
+
+  .rsvp-btn {
+    background: var(--gold);
+    color: var(--pine);
+    border: none;
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: opacity 0.2s;
+  }
+
+  .rsvp-btn:hover { opacity: 0.85; }
+
+  /* ── PHOTOS ──────────────────────────────────────── */
+  .photos-section {
+    background: var(--warm-white);
+    max-width: 100%;
+    padding: 5rem 2rem;
+  }
+
+  .photos-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .photo-tile {
+    background: var(--snow);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-tile.tall {
+    grid-row: span 2;
+    aspect-ratio: unset;
+  }
+
+  .photo-tile.wide {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+  }
+
+  .photo-tile.ph1 { background: linear-gradient(135deg, #3a5a3a, #1a2e1a); }
+  .photo-tile.ph2 { background: linear-gradient(135deg, #c8dce8, #8aaec4); }
+  .photo-tile.ph3 { background: linear-gradient(135deg, #6b4c2a, #3a2a10); }
+  .photo-tile.ph4 { background: linear-gradient(135deg, #4a6b4a, #2a4a2a); }
+  .photo-tile.ph5 { background: linear-gradient(135deg, #7a8a9a, #4a5a6a); }
+  .photo-tile.ph6 { background: linear-gradient(135deg, #5a3a2a, #3a2010); }
+  .photo-tile.ph7 { background: linear-gradient(135deg, #2d4a2d, #1a2e1a); }
+
+  .photo-label {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .photos-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px dashed var(--snow);
+    border-radius: 3px;
+    padding: 1.5rem;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin-top: 1.5rem;
+  }
+
+  .photos-upload:hover { border-color: var(--gold); }
+
+  .upload-text {
+    font-size: 0.78rem;
+    color: var(--sage);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── TRAVEL ──────────────────────────────────────── */
+  .travel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .travel-card {
+    border-top: 2px solid var(--gold);
+    padding-top: 1.25rem;
+  }
+
+  .travel-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--pine);
+    margin-bottom: 0.6rem;
+  }
+
+  .travel-card p {
+    font-size: 0.82rem;
+    color: #5a5a5a;
+    line-height: 1.65;
+  }
+
+  .travel-card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,150,58,0.3);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+
+  .travel-card a:hover { border-color: var(--gold); }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  footer {
+    background: var(--pine);
+    border-top: 1px solid rgba(201,150,58,0.15);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--cream);
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-sub {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.12em;
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────────── */
+  @media (max-width: 768px) {
+    .itinerary-grid { grid-template-columns: 1fr 1fr; }
+    .lodge-split { grid-template-columns: 1fr; }
+    .activities-grid { grid-template-columns: 1fr 1fr; }
+    .photos-grid { grid-template-columns: 1fr 1fr; }
+    .travel-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .countdown-inner { gap: 1.5rem; }
+    .countdown-sep { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ─────────────────────────────────────────── -->
+<section class="hero" style="padding:0; max-width:100%;">
+  <div class="hero-bg"></div>
+  <div class="stars"></div>
+
+  <!-- Pine trees -->
+  <div class="pine-trees">
+    <div class="tree tree-2"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-4"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-1"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-3"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-5"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-1"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-4"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-2"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-3"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-5"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-1"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+    <div class="tree tree-2"><div class="tree-top"></div><div class="tree-layer2"></div><div class="tree-trunk"></div></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Dog Creek Lodge &nbsp;·&nbsp; Olney, Montana</p>
+    <h1 class="hero-title">
+      Senecal
+      <em>Family Reunion</em>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-dates">June 16 – 19, 2027</p>
+    <p class="hero-location">Where the pines meet the mountains</p>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav class="nav">
+  <span class="nav-brand">Senecal 2027</span>
+  <ul class="nav-links">
+    <li><a href="#itinerary">Schedule</a></li>
+    <li><a href="#lodge">The Lodge</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#travel">Getting There</a></li>
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+  </ul>
+</nav>
+
+<!-- ── COUNTDOWN ────────────────────────────────────── -->
+<div class="countdown-band">
+  <div class="countdown-inner" id="countdown">
+    <div class="countdown-unit">
+      <span class="countdown-number" id="days">347</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <div class="countdown-sep">·</div>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="hours">14</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-sep">·</div>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="minutes">22</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+    <div class="countdown-sep">·</div>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="seconds">08</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── ITINERARY ─────────────────────────────────────── -->
+<section id="itinerary">
+  <p class="section-label">The Weekend</p>
+  <h2 class="section-title">Schedule &amp; Activities</h2>
+
+  <div class="itinerary-grid">
+    <div class="itinerary-day">
+      <div class="day-date">16</div>
+      <div class="day-name">Tuesday · Arrive</div>
+      <div class="day-events">
+        <div class="day-event">
+          <span class="event-time">All day</span>
+          <span class="event-name">Fly in, drive to Olney</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">4pm+</span>
+          <span class="event-name">Check in, settle in</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">7pm</span>
+          <span class="event-name">Welcome dinner at the Lodge</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="itinerary-day day-featured">
+      <div class="day-date">17</div>
+      <div class="day-name">Wednesday · Peak Day</div>
+      <div class="day-events">
+        <div class="day-event">
+          <span class="event-time">9am</span>
+          <span class="event-name">Morning hike — Nordic trails</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">12pm</span>
+          <span class="event-name">Family lunch &amp; lawn games</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">3pm</span>
+          <span class="event-name">Free time / fishing / explore</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">7pm</span>
+          <span class="event-name">Wood-fired pizza dinner</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">9pm</span>
+          <span class="event-name">Bonfire &amp; stargazing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="itinerary-day">
+      <div class="day-date">18</div>
+      <div class="day-name">Thursday · Explore</div>
+      <div class="day-events">
+        <div class="day-event">
+          <span class="event-time">9am</span>
+          <span class="event-name">Glacier day trip (optional)</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">12pm</span>
+          <span class="event-name">Lunch at Restaurant &amp; Bar</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">4pm</span>
+          <span class="event-name">Family photo session</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">7pm</span>
+          <span class="event-name">Final family dinner</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="itinerary-day">
+      <div class="day-date">19</div>
+      <div class="day-name">Friday · Depart</div>
+      <div class="day-events">
+        <div class="day-event">
+          <span class="event-time">9am</span>
+          <span class="event-name">Farewell breakfast</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">11am</span>
+          <span class="event-name">Check out</span>
+        </div>
+        <div class="day-event">
+          <span class="event-time">All day</span>
+          <span class="event-name">Travel home safely ✈</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LODGE ─────────────────────────────────────────── -->
+<section id="lodge">
+  <p class="section-label">Where We're Staying</p>
+  <div class="lodge-split">
+    <div class="lodge-image-block">
+      <div class="lodge-img-main">Dog Creek Lodge</div>
+      <div class="lodge-img-accent">Interior</div>
+
+      <div class="lodge-stats" style="margin-top: 3.5rem;">
+        <div class="lodge-stat">
+          <div class="lodge-stat-num">34</div>
+          <div class="lodge-stat-label">Guests Max</div>
+        </div>
+        <div class="lodge-stat">
+          <div class="lodge-stat-num">4</div>
+          <div class="lodge-stat-label">Nights</div>
+        </div>
+        <div class="lodge-stat">
+          <div class="lodge-stat-num">250+</div>
+          <div class="lodge-stat-label">Acres</div>
+        </div>
+        <div class="lodge-stat">
+          <div class="lodge-stat-num">∞</div>
+          <div class="lodge-stat-label">Memories</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lodge-details">
+      <h2 class="section-title">Dog Creek Lodge</h2>
+      <p>A 34-person Nordic ski resort lodge in Olney, Montana — tucked into the Whitefish Range, surrounded by glacier-fed meadows and old-growth pine. We have the whole place to ourselves.</p>
+      <p>The Main Lodge houses the restaurant and bar. The Guest Lodge, Event Lodge, and cabins spread across the property so everyone has space while staying close.</p>
+
+      <ul class="lodge-list">
+        <li>Main Lodge — restaurant, bar, great room, fireplace</li>
+        <li>Guest Lodge — additional sleeping rooms</li>
+        <li>Event Lodge — game room, bar/kitchenette</li>
+        <li>Cabins — private accommodation options</li>
+        <li>250+ km of Nordic trails on property</li>
+        <li>Restaurant hours: Wed–Thurs 4–9pm, Fri–Sun 12–9pm</li>
+        <li>Address: 8775 US Hwy 93 N, Olney, MT 59927</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── ACTIVITIES ────────────────────────────────────── -->
+<div class="activities-section" id="activities">
+  <div class="activities-inner">
+    <p class="section-label">What We'll Do</p>
+    <h2 class="section-title">Activities</h2>
+
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-img hiking">🌲</div>
+        <div class="activity-body">
+          <div class="activity-name">Nordic Hiking</div>
+          <div class="activity-desc">Miles of trails through old-growth forest and alpine meadow right out the front door.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img fishing">🎣</div>
+        <div class="activity-body">
+          <div class="activity-name">Fishing</div>
+          <div class="activity-desc">Dog Creek and the nearby Stillwater River offer excellent trout fishing for all skill levels.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img wildlife">🦌</div>
+        <div class="activity-body">
+          <div class="activity-name">Wildlife Watching</div>
+          <div class="activity-desc">Moose, deer, and birds are regular visitors to the meadow. Glacier NP is an hour away.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img bonfire">🔥</div>
+        <div class="activity-body">
+          <div class="activity-name">Bonfire &amp; Stargazing</div>
+          <div class="activity-desc">Zero light pollution. The Milky Way is visible on clear nights. Fires every evening.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img restaurant">🍕</div>
+        <div class="activity-body">
+          <div class="activity-name">Wood-Fired Pizza</div>
+          <div class="activity-desc">The Lodge restaurant serves hand-crafted wood-fired pizza and Montana-sourced fare.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img skiing">⛰️</div>
+        <div class="activity-body">
+          <div class="activity-name">Glacier Day Trip</div>
+          <div class="activity-desc">Glacier National Park is 65 miles north. Worth a full day for those who want to explore.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TRAVEL ────────────────────────────────────────── -->
+<section id="travel">
+  <p class="section-label">Getting There</p>
+  <h2 class="section-title">Travel &amp; Logistics</h2>
+
+  <div class="travel-grid">
+    <div class="travel-card">
+      <h3>Flying In</h3>
+      <p>Fly into Glacier Park International Airport (FCA) in Kalispell, MT. It's the closest major airport — about 40 miles south of the lodge. Arrive June 16 to maximize your time.</p>
+      <a href="#">Flight search →</a>
+    </div>
+
+    <div class="travel-card">
+      <h3>Driving to the Lodge</h3>
+      <p>The lodge is at 8775 US Hwy 93 N, Olney, MT 59927. From the Kalispell airport it's roughly 45 minutes north on US-93. Scenic the entire way.</p>
+      <a href="#">Get directions →</a>
+    </div>
+
+    <div class="travel-card">
+      <h3>Carpools &amp; Rides</h3>
+      <p>Coordinate airport pickups and carpools here. If you're renting a car, post your arrival time so others can ride with you from FCA.</p>
+      <a href="#">Sign up for carpool →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PHOTOS ────────────────────────────────────────── -->
+<div class="photos-section" id="photos">
+  <div class="photos-inner">
+    <p class="section-label">Memories</p>
+    <h2 class="section-title">Photo Gallery</h2>
+    <p style="font-size:0.9rem; color:#5a5a5a; max-width:500px; line-height:1.65; margin-bottom: 0;">
+      Photos from the reunion will live here. Anyone can upload — drop your shots after the trip and we'll have a permanent family album.
+    </p>
+
+    <div class="photos-grid">
+      <div class="photo-tile tall ph1"><span style="font-size:2rem">🌲</span><span class="photo-label">Montana Pines</span></div>
+      <div class="photo-tile ph2"><span style="font-size:1.5rem">⛰️</span><span class="photo-label">The Range</span></div>
+      <div class="photo-tile ph3"><span style="font-size:1.5rem">🔥</span><span class="photo-label">Bonfire</span></div>
+      <div class="photo-tile ph4"><span style="font-size:1.5rem">🦌</span><span class="photo-label">Wildlife</span></div>
+      <div class="photo-tile wide ph5"><span style="font-size:2rem">🏔️</span><span class="photo-label">Glacier Day</span></div>
+      <div class="photo-tile ph6"><span style="font-size:1.5rem">🍕</span><span class="photo-label">Dinner</span></div>
+    </div>
+
+    <div class="photos-upload">
+      <span style="font-size:1.2rem">📸</span>
+      <span class="upload-text">Drop your photos here after the reunion — everyone can contribute</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── RSVP ──────────────────────────────────────────── -->
+<div class="rsvp-section" id="rsvp">
+  <div class="rsvp-inner">
+    <p class="section-label" style="color:rgba(201,150,58,0.8)">You're Invited</p>
+    <h2 class="section-title">RSVP</h2>
+    <p class="rsvp-subtitle">Let us know you're coming so we can plan meals, rooms, and activities. Deadline: April 1, 2027.</p>
+
+    <form class="rsvp-form" onsubmit="return false;">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="First name">
+        <input class="form-input" type="text" placeholder="Last name">
+      </div>
+      <input class="form-input" type="email" placeholder="Email address">
+      <div class="form-row">
+        <input class="form-input" type="number" placeholder="# of adults">
+        <input class="form-input" type="number" placeholder="# of kids">
+      </div>
+      <select class="form-select">
+        <option value="" disabled selected>Dietary restrictions (if any)</option>
+        <option>None</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Gluten-free</option>
+        <option>Other — I'll add a note</option>
+      </select>
+      <input class="form-input" type="text" placeholder="Notes, questions, or carpool needs">
+      <button class="rsvp-btn">Confirm Attendance</button>
+    </form>
+  </div>
+</div>
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+<footer>
+  <div class="footer-title">Senecal Family Reunion 2027</div>
+  <p class="footer-sub">June 16–19 &nbsp;·&nbsp; Dog Creek Lodge &nbsp;·&nbsp; Olney, Montana</p>
+  <p style="margin-top:1.5rem; font-size:0.65rem; color:rgba(245,240,232,0.2); letter-spacing:0.1em;">Questions? Contact the organizer</p>
+</footer>
+
+<script>
+  // Live countdown to June 16, 2027 at 3pm MT
+  function updateCountdown() {
+    const target = new Date('2027-06-16T15:00:00-06:00');
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) return;
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('days').textContent = d;
+    document.getElementById('hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+    document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
