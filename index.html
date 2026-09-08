@@ -3,7 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senecal Family Reunion 2027 | Dog Creek Lodge</title>
+<title>Senecal Family Reunion 2027</title>
+<meta name="description" content="Everything you need to know for the Senecal Family Reunion, June 16–19, 2027, in Northwest Montana.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://senecalreunion2027.com/">
+<meta property="og:title" content="Senecal Family Reunion 2027">
+<meta property="og:description" content="June 16–19, 2027 · Dog Creek Lodge · Olney, Montana">
+<meta property="og:image" content="https://senecalreunion2027.com/assets/swiftcurrent-lake.jpg">
+<meta property="og:image:alt" content="Mountains reflected in Swiftcurrent Lake at sunset in Glacier National Park">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Senecal Family Reunion 2027">
+<meta name="twitter:description" content="June 16–19, 2027 · Dog Creek Lodge · Olney, Montana">
+<meta name="twitter:image" content="https://senecalreunion2027.com/assets/swiftcurrent-lake.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -192,6 +203,36 @@
     opacity: 0.9;
   }
 
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 3px;
+    background: var(--gold);
+    color: var(--pine);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .hero-btn.secondary {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(245,240,232,0.35);
+  }
+
+  .hero-btn:hover { transform: translateY(-2px); }
+
   .hero-scroll {
     position: absolute;
     bottom: 2.5rem;
@@ -282,6 +323,14 @@
     color: var(--pine);
     line-height: 1.1;
     margin-bottom: 2.5rem;
+  }
+
+  .section-intro {
+    max-width: 680px;
+    margin: -1.4rem 0 2.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
   /* ── COUNTDOWN BAND ──────────────────────────────── */
@@ -389,6 +438,30 @@
     color: var(--charcoal);
     line-height: 1.35;
   }
+
+  .essential-icon {
+    font-size: 1.25rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .essential-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--pine);
+    margin-bottom: 0.65rem;
+  }
+
+  .essential-copy {
+    font-size: 0.84rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .day-featured .essential-title,
+  .day-featured .essential-copy { color: var(--cream); }
+
+  .day-featured .essential-copy { color: rgba(245,240,232,0.72); }
 
   .day-featured {
     background: var(--pine);
@@ -552,6 +625,109 @@
     line-height: 1.55;
   }
 
+  .activity-provider {
+    margin-top: 0.85rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(31, 61, 43, 0.12);
+  }
+
+  .provider-name {
+    display: block;
+    color: var(--pine);
+    font-size: 0.73rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .provider-contact {
+    color: #6a6a6a;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .provider-contact a {
+    color: var(--sage);
+    text-decoration: none;
+  }
+
+  .activity-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.8rem;
+  }
+
+  .activity-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid rgba(201,150,58,0.55);
+    border-radius: 3px;
+    color: #9a6e20;
+    font-size: 0.63rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .activity-link:hover {
+    background: var(--gold);
+    color: var(--pine);
+  }
+
+  .booking-note {
+    margin-top: 2rem;
+    padding: 1.2rem 1.35rem;
+    border-left: 2px solid var(--gold);
+    background: var(--warm-white);
+    color: #5a5a5a;
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+  .organizer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 1.15rem 1.35rem;
+    background: var(--pine);
+    border-radius: 4px;
+  }
+
+  .organizer-contact strong {
+    display: block;
+    color: var(--cream);
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .organizer-contact span {
+    color: rgba(245,240,232,0.52);
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .organizer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.6rem;
+  }
+
+  .organizer-links a {
+    white-space: nowrap;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(201,150,58,0.35);
+    padding-bottom: 2px;
+    font-size: 0.72rem;
+    text-decoration: none;
+  }
+
   /* ── RSVP ────────────────────────────────────────── */
   .rsvp-section {
     background: var(--pine);
@@ -577,65 +753,42 @@
     margin-bottom: 2.5rem;
   }
 
-  .rsvp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    text-align: left;
+  .rsvp-frame-wrap {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(245,240,232,0.16);
+    border-radius: 6px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
   }
 
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-  }
-
-  .form-input {
-    background: rgba(245,240,232,0.07);
-    border: 1px solid rgba(245,240,232,0.15);
-    border-radius: 3px;
-    padding: 0.85rem 1rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    color: var(--cream);
+  .rsvp-frame {
+    display: block;
     width: 100%;
-    outline: none;
-    transition: border-color 0.2s;
+    height: 900px;
+    border: 0;
+    background: #fff;
   }
 
-  .form-input::placeholder { color: rgba(245,240,232,0.3); }
-  .form-input:focus { border-color: var(--gold); }
-
-  .form-select {
-    background: rgba(245,240,232,0.07);
-    border: 1px solid rgba(245,240,232,0.15);
-    border-radius: 3px;
-    padding: 0.85rem 1rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    color: rgba(245,240,232,0.6);
-    width: 100%;
-    outline: none;
-    appearance: none;
+  .rsvp-fallback {
+    margin-top: 1rem;
+    color: rgba(245,240,232,0.48);
+    font-size: 0.72rem;
+    line-height: 1.5;
   }
 
-  .rsvp-btn {
-    background: var(--gold);
-    color: var(--pine);
-    border: none;
-    border-radius: 3px;
-    padding: 1rem 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    transition: opacity 0.2s;
+  .rsvp-fallback a { color: var(--gold); }
+
+  .rsvp-contact {
+    margin-top: 1.35rem;
+    color: rgba(245,240,232,0.48);
+    font-size: 0.72rem;
+    line-height: 1.7;
   }
 
-  .rsvp-btn:hover { opacity: 0.85; }
+  .rsvp-contact a {
+    color: var(--gold);
+    text-decoration: none;
+  }
 
   /* ── PHOTOS ──────────────────────────────────────── */
   .photos-section {
@@ -656,6 +809,31 @@
     gap: 0.75rem;
     margin-top: 2.5rem;
   }
+
+  .montana-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .montana-grid .photo-tile {
+    aspect-ratio: 4/3;
+  }
+
+  .montana-grid .photo-tile:first-child {
+    grid-row: span 2;
+    aspect-ratio: auto;
+  }
+
+  .photo-credit {
+    margin-top: 0.85rem;
+    color: #777;
+    font-size: 0.68rem;
+    line-height: 1.5;
+  }
+
+  .photo-credit a { color: var(--sage); }
 
   .photo-tile {
     background: var(--snow);
@@ -785,11 +963,27 @@
     .lodge-split { grid-template-columns: 1fr; }
     .activities-grid { grid-template-columns: 1fr 1fr; }
     .photos-grid { grid-template-columns: 1fr 1fr; }
+    .montana-grid { grid-template-columns: 1fr 1fr; }
+    .montana-grid .photo-tile:first-child { grid-column: span 2; grid-row: auto; aspect-ratio: 16/9; }
     .travel-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
+    .rsvp-frame { height: 82vh; min-height: 720px; }
+    .organizer-contact { align-items: flex-start; flex-direction: column; }
+    .organizer-links { justify-content: flex-start; }
     .nav-links { display: none; }
     .countdown-inner { gap: 1.5rem; }
     .countdown-sep { display: none; }
+    .hero { min-height: 92vh; }
+    .hero-scroll { display: none; }
+  }
+
+  @media (max-width: 520px) {
+    .itinerary-grid { grid-template-columns: 1fr; }
+    .activities-grid { grid-template-columns: 1fr; }
+    .montana-grid { grid-template-columns: 1fr; }
+    .montana-grid .photo-tile:first-child { grid-column: auto; aspect-ratio: 4/3; }
+    .countdown-number { font-size: 2.5rem; }
+    .countdown-inner { gap: 1rem; }
+    .hero-title { font-size: clamp(3rem, 18vw, 4.8rem); }
   }
 </style>
 </head>
@@ -817,14 +1011,18 @@
   </div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Dog Creek Lodge &nbsp;·&nbsp; Olney, Montana</p>
+    <p class="hero-eyebrow">Olney, Montana</p>
     <h1 class="hero-title">
       Senecal
       <em>Family Reunion</em>
     </h1>
     <div class="hero-divider"></div>
     <p class="hero-dates">June 16 – 19, 2027</p>
-    <p class="hero-location">Where the pines meet the mountains</p>
+    <p class="hero-location">Dog Creek Lodge · Northwest Montana</p>
+    <div class="hero-actions">
+      <a class="hero-btn" href="#rsvp">RSVP by April 1</a>
+      <a class="hero-btn secondary" href="#essentials">What to know</a>
+    </div>
   </div>
 
   <div class="hero-scroll">
@@ -837,11 +1035,10 @@
 <nav class="nav">
   <span class="nav-brand">Senecal 2027</span>
   <ul class="nav-links">
-    <li><a href="#itinerary">Schedule</a></li>
+    <li><a href="#essentials">What to Know</a></li>
     <li><a href="#lodge">The Lodge</a></li>
-    <li><a href="#activities">Activities</a></li>
     <li><a href="#travel">Getting There</a></li>
-    <li><a href="#photos">Photos</a></li>
+    <li><a href="#activities">Things to Do</a></li>
     <li><a href="#rsvp">RSVP</a></li>
   </ul>
 </nav>
@@ -871,98 +1068,35 @@
   </div>
 </div>
 
-<!-- ── ITINERARY ─────────────────────────────────────── -->
-<section id="itinerary">
-  <p class="section-label">The Weekend</p>
-  <h2 class="section-title">Schedule &amp; Activities</h2>
+<!-- ── ESSENTIALS ────────────────────────────────────── -->
+<section id="essentials">
+  <p class="section-label">Start Here</p>
+  <h2 class="section-title">What You Need to Know</h2>
+  <p class="section-intro">We’re getting the Senecal family together in Northwest Montana for a few days of good food, time outside, and being together. Here’s what is confirmed so far. We’ll add more detail as plans take shape.</p>
 
   <div class="itinerary-grid">
     <div class="itinerary-day">
-      <div class="day-date">16</div>
-      <div class="day-name">Tuesday · Arrive</div>
-      <div class="day-events">
-        <div class="day-event">
-          <span class="event-time">All day</span>
-          <span class="event-name">Fly in, drive to Olney</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">4pm+</span>
-          <span class="event-name">Check in, settle in</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">7pm</span>
-          <span class="event-name">Welcome dinner at the Lodge</span>
-        </div>
-      </div>
+      <div class="essential-icon">📅</div>
+      <div class="essential-title">The dates</div>
+      <div class="essential-copy">Wednesday, June 16 through Saturday, June 19, 2027. Exact check-in and checkout times are still being confirmed.</div>
     </div>
 
     <div class="itinerary-day day-featured">
-      <div class="day-date">17</div>
-      <div class="day-name">Wednesday · Peak Day</div>
-      <div class="day-events">
-        <div class="day-event">
-          <span class="event-time">9am</span>
-          <span class="event-name">Morning hike |Nordic trails</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">12pm</span>
-          <span class="event-name">Family lunch &amp; lawn games</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">3pm</span>
-          <span class="event-name">Free time / fishing / explore</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">7pm</span>
-          <span class="event-name">Wood-fired pizza dinner</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">9pm</span>
-          <span class="event-name">Bonfire &amp; stargazing</span>
-        </div>
-      </div>
+      <div class="essential-icon">🏡</div>
+      <div class="essential-title">The stay</div>
+      <div class="essential-copy">The family has Dog Creek Lodge and its grounds reserved. Room assignments and final lodging details will follow after RSVPs.</div>
     </div>
 
     <div class="itinerary-day">
-      <div class="day-date">18</div>
-      <div class="day-name">Thursday · Explore</div>
-      <div class="day-events">
-        <div class="day-event">
-          <span class="event-time">9am</span>
-          <span class="event-name">Glacier day trip (optional)</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">12pm</span>
-          <span class="event-name">Lunch at Restaurant &amp; Bar</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">4pm</span>
-          <span class="event-name">Family photo session</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">7pm</span>
-          <span class="event-name">Final family dinner</span>
-        </div>
-      </div>
+      <div class="essential-icon">🍽️</div>
+      <div class="essential-title">Meals</div>
+      <div class="essential-copy">Plan on breakfast together at the lodge, lunch while exploring, and dinners coordinated with the lodge. Tell us about every food allergy in your RSVP.</div>
     </div>
 
     <div class="itinerary-day">
-      <div class="day-date">19</div>
-      <div class="day-name">Friday · Depart</div>
-      <div class="day-events">
-        <div class="day-event">
-          <span class="event-time">9am</span>
-          <span class="event-name">Farewell breakfast</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">11am</span>
-          <span class="event-name">Check out</span>
-        </div>
-        <div class="day-event">
-          <span class="event-time">All day</span>
-          <span class="event-name">Travel home safely ✈</span>
-        </div>
-      </div>
+      <div class="essential-icon">🌲</div>
+      <div class="essential-title">The plan</div>
+      <div class="essential-copy">The days will stay flexible. Glacier, Whitefish, hiking, rafting, fishing, and Flathead Lake are ideas, not a fixed group itinerary.</div>
     </div>
   </div>
 </section>
@@ -978,37 +1112,63 @@
       <div class="lodge-stats" style="margin-top: 3.5rem;">
         <div class="lodge-stat">
           <div class="lodge-stat-num">34</div>
-          <div class="lodge-stat-label">Guests Max</div>
+          <div class="lodge-stat-label">Guest Capacity</div>
         </div>
         <div class="lodge-stat">
-          <div class="lodge-stat-num">4</div>
-          <div class="lodge-stat-label">Nights</div>
+          <div class="lodge-stat-num">3</div>
+          <div class="lodge-stat-label">Nights Together</div>
         </div>
         <div class="lodge-stat">
-          <div class="lodge-stat-num">250+</div>
-          <div class="lodge-stat-label">Acres</div>
+          <div class="lodge-stat-num">Whole</div>
+          <div class="lodge-stat-label">Property Reserved</div>
         </div>
         <div class="lodge-stat">
-          <div class="lodge-stat-num">∞</div>
-          <div class="lodge-stat-label">Memories</div>
+          <div class="lodge-stat-num">Together</div>
+          <div class="lodge-stat-label">Across the Property</div>
         </div>
       </div>
     </div>
 
     <div class="lodge-details">
       <h2 class="section-title">Dog Creek Lodge</h2>
-      <p>A 34-person Nordic ski resort lodge in Olney, Montana |tucked into the Whitefish Range, surrounded by glacier-fed meadows and old-growth pine. We have the whole place to ourselves.</p>
-      <p>The Main Lodge houses the restaurant and bar. The Guest Lodge, Event Lodge, and cabins spread across the property so everyone has space while staying close.</p>
+      <p>Dog Creek Lodge sits in Olney, north of Whitefish, with enough room for the family to stay together while still having space to spread out. We’ll have the lodge and grounds to ourselves for the reunion.</p>
+      <p>The property includes the Main Lodge, Guest Lodge, Event Lodge, and cabins. Frank and Mary are coordinating rooms, meals, and the remaining details directly with the lodge.</p>
 
       <ul class="lodge-list">
-        <li>Main Lodge |restaurant, bar, great room, fireplace</li>
-        <li>Guest Lodge |additional sleeping rooms</li>
-        <li>Event Lodge |game room, bar/kitchenette</li>
-        <li>Cabins |private accommodation options</li>
-        <li>250+ km of Nordic trails on property</li>
-        <li>Restaurant hours: Wed–Thurs 4–9pm, Fri–Sun 12–9pm</li>
+        <li>Main Lodge with restaurant, bar, great room, fireplace, and commercial kitchen</li>
+        <li>Guest Lodge with additional rooms</li>
+        <li>Event Lodge with a game room and kitchenette</li>
+        <li>Cabins across the property</li>
+        <li>Breakfast at the lodge and dinners coordinated with the lodge</li>
         <li>Address: 8775 US Hwy 93 N, Olney, MT 59927</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRAVEL ────────────────────────────────────────── -->
+<section id="travel">
+  <p class="section-label">Getting There</p>
+  <h2 class="section-title">Travel &amp; Logistics</h2>
+  <p class="section-intro">Northwest Montana is easiest to explore by car. We’ll use RSVPs to help connect relatives who want to share a rental car or coordinate an airport pickup.</p>
+
+  <div class="travel-grid">
+    <div class="travel-card">
+      <h3>Flying In</h3>
+      <p>Glacier Park International Airport (FCA) in Kalispell is the closest airport. Alaska, Delta, American, United, Allegiant, and Sun Country serve the airport, although nonstop routes vary by season.</p>
+      <a href="https://iflyglacier.com/airlines/" target="_blank" rel="noopener">See FCA airlines →</a>
+    </div>
+
+    <div class="travel-card">
+      <h3>Driving to the Lodge</h3>
+      <p>Dog Creek Lodge is at 8775 US Hwy 93 N in Olney, north of Whitefish. Plan to rent a car, ride with family, or arrange an airport pickup before arriving.</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=8775+US+Hwy+93+N+Olney+MT+59927" target="_blank" rel="noopener">Get directions →</a>
+    </div>
+
+    <div class="travel-card">
+      <h3>Coming Early or Staying Longer?</h3>
+      <p>Frank and Mary plan to be in Whitefish before the reunion to get organized and may stay a few days afterward. Anyone who wants to extend the trip is welcome to coordinate with them.</p>
+      <a href="#rsvp">Tell us in your RSVP →</a>
     </div>
   </div>
 </section>
@@ -1016,127 +1176,137 @@
 <!-- ── ACTIVITIES ────────────────────────────────────── -->
 <div class="activities-section" id="activities">
   <div class="activities-inner">
-    <p class="section-label">What We'll Do</p>
-    <h2 class="section-title">Activities</h2>
+    <p class="section-label">While You’re Here</p>
+    <h2 class="section-title">Things You Might Want to Do</h2>
+    <p class="section-intro">These are optional ideas from Frank’s early planning. Book directly with the provider if something sounds fun, and include your interests in the RSVP so relatives can coordinate.</p>
 
     <div class="activities-grid">
       <div class="activity-card">
-        <div class="activity-img hiking">🌲</div>
-        <div class="activity-body">
-          <div class="activity-name">Nordic Hiking</div>
-          <div class="activity-desc">Miles of trails through old-growth forest and alpine meadow right out the front door.</div>
-        </div>
-      </div>
-
-      <div class="activity-card">
-        <div class="activity-img fishing">🎣</div>
-        <div class="activity-body">
-          <div class="activity-name">Fishing</div>
-          <div class="activity-desc">Dog Creek and the nearby Stillwater River offer excellent trout fishing for all skill levels.</div>
-        </div>
-      </div>
-
-      <div class="activity-card">
-        <div class="activity-img wildlife">🦌</div>
-        <div class="activity-body">
-          <div class="activity-name">Wildlife Watching</div>
-          <div class="activity-desc">Moose, deer, and birds are regular visitors to the meadow. Glacier NP is an hour away.</div>
-        </div>
-      </div>
-
-      <div class="activity-card">
-        <div class="activity-img bonfire">🔥</div>
-        <div class="activity-body">
-          <div class="activity-name">Bonfire &amp; Stargazing</div>
-          <div class="activity-desc">Zero light pollution. The Milky Way is visible on clear nights. Fires every evening.</div>
-        </div>
-      </div>
-
-      <div class="activity-card">
-        <div class="activity-img restaurant">🍕</div>
-        <div class="activity-body">
-          <div class="activity-name">Wood-Fired Pizza</div>
-          <div class="activity-desc">The Lodge restaurant serves hand-crafted wood-fired pizza and Montana-sourced fare.</div>
-        </div>
-      </div>
-
-      <div class="activity-card">
         <div class="activity-img skiing">⛰️</div>
         <div class="activity-body">
-          <div class="activity-name">Glacier Day Trip</div>
-          <div class="activity-desc">Glacier National Park is 65 miles north. Worth a full day for those who want to explore.</div>
+          <div class="activity-name">Glacier National Park</div>
+          <div class="activity-desc">Explore the west side of the park, take a scenic drive if roads are open, or choose a hike that fits your group. Mid-June access depends on snow and weather.</div>
+          <div class="activity-provider">
+            <span class="provider-name">National Park Service</span>
+            <div class="provider-contact"><a href="tel:+14068887800">406-888-7800</a> · Check 2027 access and road conditions before visiting.</div>
+            <div class="activity-actions">
+              <a class="activity-link" href="https://www.nps.gov/glac/planyourvisit/conditions.htm" target="_blank" rel="noopener">Current conditions</a>
+              <a class="activity-link" href="https://www.nps.gov/glac/planyourvisit/directions.htm" target="_blank" rel="noopener">Road status</a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img bonfire">🚲</div>
+        <div class="activity-body">
+          <div class="activity-name">E-Biking</div>
+          <div class="activity-desc">Rent an e-bike near the park or ride around Whitefish. Road access and the best route will depend on spring snow clearing.</div>
+          <div class="activity-provider">
+            <span class="provider-name">Flathead Outdoors</span>
+            <div class="provider-contact"><a href="tel:+14064079360">406-407-9360</a> · Apgar, West Glacier, and Kalispell locations</div>
+            <div class="activity-actions"><a class="activity-link" href="https://www.flatheadoutdoors.com/ebike-rentals-tours/" target="_blank" rel="noopener">View rentals</a></div>
+          </div>
+          <div class="activity-provider">
+            <span class="provider-name">Montana E-Bikes</span>
+            <div class="provider-contact"><a href="tel:+14062008495">406-200-8495</a> · <a href="mailto:drew@mtebikes.com">drew@mtebikes.com</a> · Whitefish</div>
+            <div class="activity-actions"><a class="activity-link" href="https://www.mtebikes.com/" target="_blank" rel="noopener">View rentals</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img fishing">🛶</div>
+        <div class="activity-body">
+          <div class="activity-name">Rafting or Scenic Float</div>
+          <div class="activity-desc">The Middle Fork of the Flathead offers both whitewater trips and calmer scenic floats, so relatives can choose their own level of adventure.</div>
+          <div class="activity-provider">
+            <span class="provider-name">Glacier Raft Company</span>
+            <div class="provider-contact"><a href="tel:+14068885454">406-888-5454</a> · Half-day, full-day, and scenic options</div>
+            <div class="activity-actions"><a class="activity-link" href="https://www.glacierparkcollection.com/activities/glacier-raft-co/" target="_blank" rel="noopener">Trips &amp; booking</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img hiking">🥾</div>
+        <div class="activity-body">
+          <div class="activity-name">Hiking</div>
+          <div class="activity-desc">Whitefish and Glacier offer trails ranging from easy walks to full-day hikes. Higher trails can still hold snow in June, so choose routes using current conditions.</div>
+          <div class="activity-provider">
+            <span class="provider-name">Glacier National Park trail planning</span>
+            <div class="provider-contact">Official trail maps, distances, elevation gain, and condition reports.</div>
+            <div class="activity-actions">
+              <a class="activity-link" href="https://www.nps.gov/glac/planyourvisit/hikingthetrails.htm" target="_blank" rel="noopener">Find a hike</a>
+              <a class="activity-link" href="https://www.nps.gov/glac/planyourvisit/trailstatusreports.htm" target="_blank" rel="noopener">Trail status</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img wildlife">🎣</div>
+        <div class="activity-body">
+          <div class="activity-name">Fishing</div>
+          <div class="activity-desc">Book a guided drift-boat trip on the Flathead River. Half-day and full-day options welcome beginners as well as experienced anglers.</div>
+          <div class="activity-provider">
+            <span class="provider-name">Flathead Anglers / Wild River Adventures</span>
+            <div class="provider-contact"><a href="tel:+14063879453">406-387-9453</a> · <a href="mailto:info@riverwild.com">info@riverwild.com</a></div>
+            <div class="activity-actions"><a class="activity-link" href="https://www.riverwild.com/fishing-trips/" target="_blank" rel="noopener">Fishing trips</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-img restaurant">🚤</div>
+        <div class="activity-body">
+          <div class="activity-name">Flathead Lake</div>
+          <div class="activity-desc">Rent a powerboat or spend time paddling and exploring the lake. Bigfork is on the north end and makes a practical starting point from Whitefish.</div>
+          <div class="activity-provider">
+            <span class="provider-name">Old Faithful Watersports</span>
+            <div class="provider-contact"><a href="tel:+14062532702">406-253-2702</a> · <a href="mailto:oldfaithfulrentals@msn.com">oldfaithfulrentals@msn.com</a> · Bigfork</div>
+            <div class="activity-actions"><a class="activity-link" href="https://flatheadlakeboatrentals.com/" target="_blank" rel="noopener">Boat rentals</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="booking-note"><strong>Before booking:</strong> Providers have not published their 2027 schedules and rates yet. Confirm the cancellation policy, age or weight requirements, and June conditions directly with the company. Each household is responsible for its own reservation and payment; use the RSVP to tell the family what you’re considering so others can join.</p>
+    <div class="organizer-contact">
+      <div>
+        <strong>Coordinate with Frank</strong>
+        <span>Questions about the reunion, shared plans, or arriving early?</span>
+      </div>
+      <div class="organizer-links">
+        <a href="mailto:fsenecal@southsoundcare.org">fsenecal@southsoundcare.org</a>
+        <a href="tel:+12533816520">253-381-6520</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── TRAVEL ────────────────────────────────────────── -->
-<section id="travel">
-  <p class="section-label">Getting There</p>
-  <h2 class="section-title">Travel &amp; Logistics</h2>
-
-  <div class="travel-grid">
-    <div class="travel-card">
-      <h3>Flying In</h3>
-      <p>Fly into Glacier Park International Airport (FCA) in Kalispell, MT. It's the closest major airport |about 40 miles south of the lodge. Arrive June 16 to maximize your time.</p>
-      <a href="#">Flight search →</a>
-    </div>
-
-    <div class="travel-card">
-      <h3>Driving to the Lodge</h3>
-      <p>The lodge is at 8775 US Hwy 93 N, Olney, MT 59927. From the Kalispell airport it's roughly 45 minutes north on US-93. Scenic the entire way.</p>
-      <a href="#">Get directions →</a>
-    </div>
-
-    <div class="travel-card">
-      <h3>Carpools &amp; Rides</h3>
-      <p>Coordinate airport pickups and carpools here. If you're renting a car, post your arrival time so others can ride with you from FCA.</p>
-      <a href="#">Sign up for carpool →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── PHOTOS ────────────────────────────────────────── -->
-<div class="photos-section" id="photos">
+<!-- ── MONTANA ───────────────────────────────────────── -->
+<div class="photos-section" id="montana">
   <div class="photos-inner">
-    <p class="section-label">Memories</p>
-    <h2 class="section-title">Photo Gallery</h2>
-    <p style="font-size:0.9rem; color:#5a5a5a; max-width:500px; line-height:1.65; margin-bottom: 0;">
-      Photos from the reunion will live here. Anyone can upload |drop your shots after the trip and we'll have a permanent family album.
-    </p>
+    <p class="section-label">Northwest Montana</p>
+    <h2 class="section-title">A Pretty Good Place to Get Together</h2>
+    <p class="section-intro">This corner of Montana is full of clear lakes, mountain roads, river valleys, and small towns worth exploring. The reunion comes first. Everything else is there if you want to make a little more of the trip.</p>
 
-    <div class="photos-grid">
-      <div class="photo-tile tall ph1">
-        <img src="https://static.wixstatic.com/media/0de0d4_c62602f0493b4da3829b34f399e2ce04~mv2.jpg/v1/fill/w_600,h_800,al_c,q_85,enc_avif,quality_auto/dog-creek-lodge-ML-Entry-4.jpg" alt="Lodge entry">
-        <span class="photo-label">The Lodge</span>
+    <div class="montana-grid">
+      <div class="photo-tile">
+        <img src="assets/lake-mcdonald.jpg" alt="A person standing at the end of a dock overlooking Lake McDonald and the mountains">
+        <span class="photo-label">Lake McDonald</span>
       </div>
-      <div class="photo-tile ph2">
-        <img src="https://static.wixstatic.com/media/0de0d4_96bbf06dfe6148ef9b65485647a47bde~mv2.jpg/v1/fill/w_967,h_417,q_90,enc_avif,quality_auto/0de0d4_96bbf06dfe6148ef9b65485647a47bde~mv2.jpg" alt="Lodge view">
-        <span class="photo-label">Main Lodge</span>
+      <div class="photo-tile">
+        <img src="assets/going-to-sun-road.jpg" alt="An early-summer waterfall along Going-to-the-Sun Road in Glacier National Park">
+        <span class="photo-label">Glacier in early summer</span>
       </div>
-      <div class="photo-tile ph3">
-        <img src="https://static.wixstatic.com/media/0de0d4_737d2a7da17146c6972d1b65ee282de8~mv2.jpg/v1/fill/w_937,h_561,q_90,enc_avif,quality_auto/0de0d4_737d2a7da17146c6972d1b65ee282de8~mv2.jpg" alt="Event Lodge">
-        <span class="photo-label">Event Lodge</span>
-      </div>
-      <div class="photo-tile ph4">
-        <img src="https://static.wixstatic.com/media/0de0d4_ba06db9e965845ab84ec077542fa51f7~mv2.jpg/v1/fill/w_937,h_561,q_90,enc_avif,quality_auto/0de0d4_ba06db9e965845ab84ec077542fa51f7~mv2.jpg" alt="Interior">
-        <span class="photo-label">Inside</span>
-      </div>
-      <div class="photo-tile wide ph5">
-        <img src="https://static.wixstatic.com/media/0de0d4_cb088593fa024d91bb2bd95f1982361a~mv2.jpg/v1/fill/w_967,h_417,q_90,enc_avif,quality_auto/0de0d4_cb088593fa024d91bb2bd95f1982361a~mv2.jpg" alt="Dog Creek property">
-        <span class="photo-label">The Property</span>
-      </div>
-      <div class="photo-tile ph6">
-        <img src="https://static.wixstatic.com/media/0de0d4_d3567fa53ce64c609cb714f1c04b94c7~mv2.jpg/v1/crop/x_2,y_139,w_1587,h_484/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/Dog-Creek-Lodge_Homepage-Slide18.jpg" alt="Aerial view">
-        <span class="photo-label">Aerial</span>
+      <div class="photo-tile">
+        <img src="assets/swiftcurrent-lake.jpg" alt="Sunset over the mountains and Swiftcurrent Lake in Glacier National Park">
+        <span class="photo-label">Swiftcurrent Lake</span>
       </div>
     </div>
-
-    <div class="photos-upload">
-      <span style="font-size:1.2rem">📸</span>
-      <span class="upload-text">Drop your photos here after the reunion |everyone can contribute</span>
-    </div>
+    <p class="photo-credit">Photos courtesy of the <a href="https://www.flickr.com/photos/glaciernps/" target="_blank" rel="noopener">National Park Service</a> · Public domain</p>
   </div>
 </div>
 
@@ -1145,29 +1315,13 @@
   <div class="rsvp-inner">
     <p class="section-label" style="color:rgba(201,150,58,0.8)">You're Invited</p>
     <h2 class="section-title">RSVP</h2>
-    <p class="rsvp-subtitle">Let us know you're coming so we can plan meals, rooms, and activities. Deadline: April 1, 2027.</p>
+    <p class="rsvp-subtitle">Please reply by April 1, 2027 so Frank and Mary can plan rooms, meals, transportation, and optional activities. Your answers will be recorded when you select Submit at the end of the form.</p>
 
-    <form class="rsvp-form" onsubmit="return false;">
-      <div class="form-row">
-        <input class="form-input" type="text" placeholder="First name">
-        <input class="form-input" type="text" placeholder="Last name">
-      </div>
-      <input class="form-input" type="email" placeholder="Email address">
-      <div class="form-row">
-        <input class="form-input" type="number" placeholder="# of adults">
-        <input class="form-input" type="number" placeholder="# of kids">
-      </div>
-      <select class="form-select">
-        <option value="" disabled selected>Dietary restrictions (if any)</option>
-        <option>None</option>
-        <option>Vegetarian</option>
-        <option>Vegan</option>
-        <option>Gluten-free</option>
-        <option>Other |I'll add a note</option>
-      </select>
-      <input class="form-input" type="text" placeholder="Notes, questions, or carpool needs">
-      <button class="rsvp-btn">Confirm Attendance</button>
-    </form>
+    <div class="rsvp-frame-wrap">
+      <iframe class="rsvp-frame" src="https://forms.cloud.microsoft/r/nFw6ZWTnC1?embed=true" title="Senecal Family Reunion 2027 RSVP" loading="lazy" allowfullscreen></iframe>
+    </div>
+    <p class="rsvp-fallback">Having trouble with the embedded form? <a href="https://forms.cloud.microsoft/r/nFw6ZWTnC1" target="_blank" rel="noopener">Open the RSVP in a new window</a>.</p>
+    <p class="rsvp-contact">Questions before you respond? Email <a href="mailto:fsenecal@southsoundcare.org">Frank</a> or call/text <a href="tel:+12533816520">253-381-6520</a>.</p>
   </div>
 </div>
 
@@ -1175,7 +1329,7 @@
 <footer>
   <div class="footer-title">Senecal Family Reunion 2027</div>
   <p class="footer-sub">June 16–19 &nbsp;·&nbsp; Dog Creek Lodge &nbsp;·&nbsp; Olney, Montana</p>
-  <p style="margin-top:1.5rem; font-size:0.65rem; color:rgba(245,240,232,0.2); letter-spacing:0.1em;">Questions? Contact the organizer</p>
+  <p style="margin-top:1.5rem; font-size:0.65rem; color:rgba(245,240,232,0.35); letter-spacing:0.1em;">Questions? <a href="mailto:fsenecal@southsoundcare.org" style="color:var(--gold);">Email Frank</a> &nbsp;·&nbsp; <a href="tel:+12533816520" style="color:var(--gold);">253-381-6520</a></p>
 </footer>
 
 <script>
@@ -1205,6 +1359,7 @@
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
 </script>
 
 </body>
